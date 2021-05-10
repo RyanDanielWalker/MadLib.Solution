@@ -12,18 +12,21 @@ namespace Madlib.Controllers
     }
 
     [Route("/madlib")]
-    public ActionResult Madlib()
+    public ActionResult Madlib(string firstWord, string secondWord, string thirdWord, string fourthWord, string fifthWord, string sixthWord, string seventhWord)
     {
       MadlibInputs myMadlibVariable = new MadlibInputs();
-      myMadlibVariable.First = "verb";
-      myMadlibVariable.Second = "adverb";
-      myMadlibVariable.Third = "noun";
-      myMadlibVariable.Fourth = "anotherVerb";
-      myMadlibVariable.Five = "anotherNoun";
-      myMadlibVariable.Sixth = "verb";
-      myMadlibVariable.Seventh = "verb";
+      myMadlibVariable.First = firstWord;
+      myMadlibVariable.Second = secondWord;
+      myMadlibVariable.Third = thirdWord;
+      myMadlibVariable.Fourth = fourthWord;
+      myMadlibVariable.Fifth = fifthWord;
+      myMadlibVariable.Sixth = sixthWord;
+      myMadlibVariable.Seventh = seventhWord;
       return View(myMadlibVariable);
-
     }
+
+    // [Route("/this")]
+
+
   }
 }

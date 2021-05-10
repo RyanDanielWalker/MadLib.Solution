@@ -23,6 +23,7 @@ namespace FriendLetter
     }
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
       app.UseRouting();
 
       app.UseEndpoints(routes =>
